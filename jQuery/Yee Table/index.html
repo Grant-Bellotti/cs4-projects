@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Shows use of table.
+-->
+    <head>
+        <title>Second Forms Ex</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>A Basic Form</h1>
+        <hr>
+        <form action="#">
+            <fieldset>
+            <legend>Student Information</legend>
+                <div>
+                    <fieldset>
+                    <legend>General</legend>
+                    <label for="username">Name:</label>
+                    <input id="username" type="text" name="username" value="">
+                    <label for="grade">Grade:</label>
+                    <input id="grade" type="number" name="grade" value="10" min="9" max="12">
+                    </fieldset>
+                </div>
+
+                <input type="reset" name="reset" value="Clear Form">
+                <input type="submit" name="send" value="Send Form">
+            </fieldset>
+        </form>
+
+        <br>
+        <div id="error"></div>
+          <br>
+
+        <table id="theTable" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+            </tr>
+        </table>
+        <input type="button" value="Fill Form" onclick="msg2()">
+        <input id="tableIndex" type="number" name="tableIndex" value="1" min="1">
+
+        <script type="text/javascript" src="index.js"></script>
+
+    </body>
+</html>

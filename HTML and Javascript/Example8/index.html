@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+	Shows use of button.onclick callback function.
+-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Fifth JavaScript and Html Ex</title>
+		<script>
+			function init()
+			{
+				alert("function init is called");
+
+				var button = document.getElementById("addButton");
+				button.onclick = handleButtonClick;
+			}
+			function handleButtonClick()
+			{
+				alert("button has been selected");
+			}
+			window.onload = init;
+		</script>
+	</head>
+	<body>
+		<form>
+		<input type="button" id="addButton" value="Press Me">
+		</form>
+	</body>
+</html>

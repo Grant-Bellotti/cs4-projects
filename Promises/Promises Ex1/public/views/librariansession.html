@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--   -->
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+  
+  <body>  
+<h1 id="session">Librarian Session</h1>
+
+    <hr>
+      <form action="#">
+        <fieldset>
+        <legend>Book Information</legend>
+
+  Title:<input id="title" type="text" name="title"><br>          
+  Author:<input id="author" type="text" name="author"><br>  
+  Pages:<input id="pages" type="number"  name="pages" value=100 min=0>            
+        
+            <br>
+            <br>
+
+          <input type="reset" name="reset" value="Clear Form">            
+        </fieldset>
+      <input id="listButton" type="button" value="List" />
+      <input id="addButton" type="button" value="Add" />
+
+      </form>
+
+<br>
+<div id="logout">
+    <input id="logout" type="button" value="Logout" />
+</div>    
+
+
+<br>
+    <table id="theTable" border="1">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Pages</th>
+      </tr>
+  
+    </table>
+
+
+	<script src="js/librariansession.js"></script>
+	
+  </body>
+</html>  
+  
+  

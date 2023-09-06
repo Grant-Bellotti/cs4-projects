@@ -1,0 +1,7 @@
+
+Upload files from the folder named fileFolder and those files will
+be uploaded to the folder named public.
+
+how to upload a file to the server.
+https://www.w3schools.com/nodejs/nodejs_uploadfiles.asp
+

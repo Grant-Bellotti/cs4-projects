@@ -1,0 +1,5 @@
+npm init: creates json file
+npm install (name of package)    
+These can be found online
+
+npm install will download again if delete modules folder

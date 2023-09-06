@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of java script and html working together.
+-->
+	<head>
+		<title>Second JavaScript and Html Ex</title>
+	</head>
+	<body>
+		<div id="myDiv">Hello</div>
+		<div class="divClass">Second Line</div>
+		<div class="divClass">
+			<p class="pClass">This is a paragraph.</p>
+		</div>
+
+		<script type="text/javascript">
+			var theDiv = document.getElementById("myDiv");
+			theDiv.style.border = "3px solid black";
+			theDiv.innerHTML = "This is now changed text.";
+		</script>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Shows use of table.
+-->
+    <head>
+        <title>Test</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>A Basic Form</h1>
+        <hr>
+        <form action="#">
+          <div>
+            <fieldset>
+            <legend>Student Information</legend>
+              <fieldset>
+              <legend>General</legend>
+              <label for="name">Name:</label>
+              <input id="name" type="text" name="name" value="">
+              <label for="birth">Birthdate:</label>
+              <input type="date" id="birth" name="birth" value="2010-01-01">
+              <label>Residence:</label>
+              <input type="radio" id="House" name="residence" value="House" checked>
+              <label for="residence">House</label>
+              <input type="radio" id="Apartment" name="residence" value="Apartment">
+              <label for="residence">Apartment</label>
+              <input type="radio" id="Cabin" name="residence" value="Cabin">
+              <label for="residence">Cabin</label>
+              <input type="radio" id="Castle" name="residence" value="Castle">
+              <label for="residence">Castle</label>
+              </fieldset>
+              <input type="reset" name="reset" value="Clear Form">
+              <input type="submit" name="send" value="Send Form">
+            </fieldset>
+          </div>
+        </form>
+
+        <table id="theTable" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Birthdate</th>
+                <th>Residence</th>
+            </tr>
+        </table>
+        <input type="button" value="Clear Table" onclick="clearTable()">
+        <input type="button" value="Fill Form" onclick="handleButtonClick()">
+        <input id="indexNum" type="number" name="indexNum" value="1" min="1">
+
+        <script type="text/javascript" src="index.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--   -->
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+  
+  <body>  
+<h1 id="session">Admin Session</h1>
+
+    <hr>
+      <form action="#">
+        <fieldset>
+        <legend>Student Information</legend>
+
+            <label for="names">Names</label>
+            <select id="names" name="names">
+            </select>     
+
+                        <label for="name">Grade:</label>
+            <input type="number" id="grade" name="grade" value=9 min=9 max=12>            
+                        <div>
+                          Sports:
+              <label for="volleyball">Volleyball</label>
+              <input type="checkbox" id="volleyball" name="sports" value="volleyball">
+              <label for="basketball">Basketball</label>      
+              <input type="checkbox" id="basketball" name="sports" value="basketball">
+              <label for="soccer">Soccer</label>
+              <input type="checkbox" id="soccer" name="sports" value="soccer">
+
+
+                        </div>
+
+            
+            <br>
+            <br>
+
+          <input type="reset" name="reset" value="Clear Form">            
+        </fieldset>
+      <input id="readButton" type="button" value="Read" />
+      <input id="updateButton" type="button" value="Update" />
+
+      </form>
+
+<br>
+<div id="logout">
+    <input id="logout" type="button" value="Logout" />
+</div>    
+
+	<script src="js/adminsession.js"></script>
+	
+  </body>
+</html>  
+  
+  

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Canvas Basic Game Template</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js">
+</script>
+<script type="text/javascript">
+
+      function handleButtonClick()
+      {
+        alert("The value is " + $("#num").val());
+//        $("#num").val(3);
+      }
+
+window.addEventListener('load', eventWindowLoaded, false);
+
+function eventWindowLoaded() {
+   canvasApp();
+}
+
+function canvasApp(){
+
+
+   var theCanvas = document.getElementById("canvas");
+theCanvas.addEventListener("mousemove",onMouseMove,false);
+theCanvas.addEventListener("click",onMouseClick,false);
+
+
+
+   if (!theCanvas || !theCanvas.getContext) {
+      return;
+   }
+
+
+   var context = theCanvas.getContext("2d");
+
+   if (!context) {
+      return;
+   }
+
+   //canvasApp level variables
+
+   var rotation = 0.0;
+
+   var keyPressList = [];
+   var mouseX = 0;
+   var mouseY = 0;
+   var click = false;
+
+   gameLoop();
+
+///////////////////////////////////////////////////////
+   function gameLoop()
+   {
+        var FRAME_RATE = 40;
+        var intervalTime = 1000/FRAME_RATE;
+
+        input();
+        paint();
+        animate();
+        window.setTimeout(gameLoop, intervalTime);
+   }
+
+   document.onkeydown = function(e){
+      e = e?e:window.event;
+      keyPressList[e.keyCode] = true;
+   }
+
+   document.onkeyup = function(e){
+      e = e?e:window.event;
+      keyPressList[e.keyCode] = false;
+   };
+
+///////////////////////////////////////////////////////
+   function onMouseMove(e)
+   {
+        mouseX = e.clientX - theCanvas.offsetLeft;
+        mouseY = e.clientY - theCanvas.offsetTop;
+   }
+   function onMouseClick(e)
+   {
+        click = !click;
+
+   }
+   function input()
+   {
+       if (keyPressList[38]==true){
+       //Up arrow
+       }
+
+       if (keyPressList[37]==true) {
+       //Left arrow
+       }
+
+       if (keyPressList[39]==true) {
+       //Right arrow
+       }
+   }
+
+   function paint()
+   {
+   // draw background
+   context.fillStyle = '#000000';
+   context.fillRect(0, 0, 200, 200);
+
+   //Text output
+   context.fillStyle = '#ffffff';
+   context.font = '10px sans-serif';
+   context.textBaseline = 'top';
+   if (click)
+       context.fillText  ("click", 0, 180);
+   else
+       context.fillText  ("" + mouseX + " " + mouseY, 0, 180);
+
+
+   drawRect(50,50,rotation,3,1);
+
+   }
+
+   function drawRect(xpos,ypos,rot,xscale,yscale)
+   {
+        context.save(); //save current state in stack
+        context.setTransform(1,0,0,1,0,0);
+
+        context.translate(xpos,ypos);
+        context.rotate(rot);
+        context.scale(xscale,yscale);
+        context.fillStyle = '#0000ff';
+        context.fillRect(-20,-20,40,40);
+
+        context.restore(); //pop old state on to screen
+   }
+
+   function animate()
+   {
+       rotation+=.01;
+   }
+////////////////////////////////////////////////////////
+
+
+
+}
+
+
+</script>
+</head>
+
+
+<body>
+<input id="num" type="number" value="0">
+<input type="button" value="Click" onclick="handleButtonClick()">
+<canvas id="canvas" width="200" height="200"  style="position:absolute;top: 50px; left: 50px;">
+ Your browser does not support HTML5 Canvas.
+</canvas>
+
+</body>
+</html>

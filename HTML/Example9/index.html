@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of forms.
+     The action attribute points to the server program.
+     action="#" goes nowhere, since no server program yet.
+-->
+	<head>
+		<title>First Forms Ex</title>
+	</head>
+	<body>
+		<h1>A Basic Form</h1>
+		<hr>
+			<form action="#">
+				<fieldset>
+					<legend>Form Information</legend>
+					<div>
+						<label for="username">Name:</label>
+						<input id="username" type="text" name="username" value="name">
+						<label for="state">State:</label>
+						<select id="state" name="state">
+							<option value="RI">Rhode Island</option>
+							<option selected="selected" value="CA">California</option>
+							<option value="HI">Hawaii</option>
+						</select>
+
+						<br>
+						<br>
+						<fieldset>
+							<legend>Pizza Information</legend>
+								<div><div> <b>Toppings:</b>
+									<br>
+									<input type="checkbox" id="cheese" name="toppings" value="cheese" checked>
+									<label for="cheese">Cheese</label>
+									<br>
+									<input type="checkbox" id="tomato" name="toppings" value="tomato">
+									<label for="tomato">Tomato</label>
+									<br>
+								<div><div> <b>Meat:</b>
+									<br> <!-- name is very important to be the same -->
+									<input type="radio" id="ham" name="meat" value="ham">
+									<label for="ham">Ham</label>
+									<br>
+									<input type="radio" id="sausage" name="meat" value="sausage">
+									<label for="sausage">Sausage</label>
+									<br>
+									<input type="radio" id="nomeat" name="meat" value="nomeat" checked="checked">
+									<label for="nomeat">No Meat</label>
+
+								<br>
+								<br>
+								<input type="reset" name="reset" value="Clear Form">
+								<input type="submit" name="send" value="Send Form">
+						</fieldset>
+					</div>
+				</fieldset>
+			</form>
+	</body>
+</html>

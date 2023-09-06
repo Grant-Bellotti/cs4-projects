@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--   -->
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+
+  <body>
+    <div id="request">
+        <div id="tellPlayer"></div>
+      <label for="guess">Guess:</label>
+      <input id="guess" type="number" name="guess" value="0" min="0" max="10" />
+        <input id="select" type="button" value="Select" />
+    </div>
+    <script>
+      function getminmax(data) {
+        $('#guess').attr('min',data.minV);
+        $('#guess').attr('max',data.maxV);
+        $('#guess').val(data.minV);
+        $("#tellPlayer").html("Choose a value from " + data.minV + " to " + data.maxV);
+
+      }
+      function success(data) {
+        alert(data.answer);
+          }
+
+          function Guess(){
+            $.get("/guess", {guessNum:$("#guess").val()},success);
+            return false;
+          }
+
+          $(document).ready(function(){
+        $.get("/checkminmax",getminmax);
+            $("#select").click(Guess);
+          });
+    </script>
+  </body>
+</html>
+ 

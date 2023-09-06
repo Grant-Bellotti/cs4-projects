@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Shows use of form events
+-->
+    <head>
+        <title>Table Ex</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <h1>Table Form</h1>
+        <hr>
+        <form action="#">
+        <fieldset>
+            <legend>Student Information</legend>
+            <div>
+              <fieldset>
+                <legend>General</legend>
+                  <label for="username">Name:</label>
+                  <input id="username" type="text" name="username" value="">
+                  <label for="age">Age:</label>
+                  <input type="number" id="age" name="age" min="1" max="25" value="1">
+                  <label for="grade">Grade:</label>
+                  <input type="number" id="grade" name="grade" min="1" max="12" value="10">
+              </fieldset>
+              <input type="reset" name="reset" value="Clear Form">
+              <input type="submit" name="send" value="Send Form">
+            </div>
+        </fieldset>
+        </form>
+        <table id="theTable" border="1">
+    			<tr>
+            <th>Name</th>
+    				<th>Age</th>
+    				<th>Grade</th>
+    			</tr>
+    		</table>
+        <input type="button" value="Fill Form" onclick="handleButtonClick()">
+        <input type="number" id="indexNum" name="indexNum" min="1" value="1">
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

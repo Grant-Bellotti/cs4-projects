@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of a jQuery ready function
+-->
+	<head>
+		<title>First jQuery Ex</title>
+		<script type="text/javascript" src="jquery-3.6.0.js"></script>
+		</script>
+	</head>
+	<body onload="writeIt()">
+		<h1>Adding jQuery</h1>
+		<script type="text/javascript">
+<!-- window.onload from f4_FourthJavaScriptHtmlEx -->
+<!-- similar to window.onload but $(document).ready event occurs when html is loaded vs -->
+<!-- window.onload event occurs later when all content is loaded -->
+			$(document).ready(  //$ means jQuery library
+				function() {
+					alert("ready");
+				}
+			);
+
+		function writeIt() {
+					alert("onload");
+		}
+
+
+		</script>
+	</body>
+</html>

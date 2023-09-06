@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--   -->
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+
+  <body>
+    <div id="request">
+      <label for="imageNum">Image Number</label>
+      <input id="imageNum" type="number" name="imageNum" min="1" value="1">
+    	<input id="select" type="button" value="Select" />
+      <input id="delete" type="button" value="Delete" />
+    </div>
+
+<!-- 0 -->
+<!--    <img id="image1" src="images/hero.jpg" alt="" height="285" width="380">  -->
+<!-- 1 -->
+    <img id="image1" src="hero.jpg" alt="" height="285" width="380">
+<!-- 2 -->
+<!--    <img id="image1" src="hello/hero.jpg" alt="" height="285" width="380">  -->
+
+
+
+    <script>
+		function success(data) {
+//      image1.src = "images/" + data.name;  // 0
+      image1.src = data.name;    // 1
+//      image1.src = 'hello/' + data.name;    // 2
+  		}
+      function deleteImage(){
+        $.ajax({
+          url: "/delete/" + $("#imageNum").val(),
+          type: "DELETE",
+          success: function(data){
+            if (data.error)
+              alert("bad");
+            else
+              alert("good");
+          } ,
+          dataType: "json"
+        });
+        return false;
+      }
+  		function getImage(){
+        $.ajax({
+          url: "/getImage",
+          type: "GET",
+          data: {index:0,num:$("#imageNum").val()},
+          success: function(data){
+            if(data.error)
+              alert("image does not exit");
+            else {
+              image1.src = data.image;
+            }
+          } ,
+          dataType: "json"
+        });
+        return false;
+  		  //$.get("/request", {index:-1},success);
+  		  //return false;
+  		}
+
+  		$(document).ready(function(){
+    	  $("#select").click(getImage);
+        $("#delete").click(deleteImage);
+  		});
+    </script>
+  </body>
+</html>

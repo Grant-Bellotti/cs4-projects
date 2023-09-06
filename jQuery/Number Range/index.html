@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of form events
+-->
+	<head>
+		<title>Number Range Ex</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<h1>Number Range Form</h1>
+		<hr>
+		<form action="#">
+		<fieldset>
+			<legend>Form Information</legend>
+
+			<input type="number" id="numRating" name="rating" value="5" min="0" max="10">
+			<input type="range" id="rating" name="rating" value="5" min="0" max="10">
+
+
+			<div class="form-field">
+				<input type="button" value="Send Form" onclick="handleButtonClick()">
+			</div>
+		</fieldset>
+		</form>
+    <script type="text/javascript">
+
+
+		$(document).on('input', '#rating', function() {
+    		$('#numRating').val( $(this).val() );
+		});
+
+		$(document).on('input', '#numRating', function() {
+		    $('#rating').val( $(this).val() );
+		});
+
+    function handleButtonClick() {
+      alert($("#rating").val());
+      $("#rating").val(2);
+      $("#numRating").val(2);
+    }
+
+		</script>
+	</body>

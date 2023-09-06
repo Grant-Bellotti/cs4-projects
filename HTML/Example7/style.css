@@ -1,0 +1,13 @@
+#myName {
+	font-weight: bold;
+	font-size: 90px;
+}
+/* this is a comment line */
+.yourName {
+	font-size: 24px;
+	font-family: comic sans ms, broadway, arial
+}
+span {
+	font-style: italic;
+	color: #0000FF;
+}

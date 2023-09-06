@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Shows use of form events
+-->
+    <head>
+        <title>Checkbox Ex</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <h1>Checkbox Form</h1>
+        <hr>
+        <form action="#">
+        <fieldset>
+            <legend>Form Information</legend>
+            <input type="range" id="range" name="range" min="-5" max="5" value="-5">
+
+            <div class="form-field">
+                <input id="submit" type="submit" name="submit" value="Send Form">
+            </div>
+        </fieldset>
+        </form>
+
+        <script type="text/javascript">
+
+        $(document).ready(
+            function()
+            {
+                $("form").submit(
+                    function(event)
+                    {
+											//	console.log($("#sports1").prop("checked"));
+												alert($("#range").val());
+                        $("#range").val("5");
+
+                        return false;
+                    }
+                );
+            }
+        );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "example2",
+  "version": "1.0.0",
+  "description": "first use of a package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grant Bellotti",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "seedrandom": "^3.0.5"
+  }
+}

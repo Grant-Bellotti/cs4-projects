@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Shows use of form events
+-->
+    <head>
+        <title>Checkbox Ex</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <h1>Checkbox Form</h1>
+        <hr>
+        <form action="#">
+        <fieldset>
+            <legend>Form Information</legend>
+							<label for="sports1">Baseball</label>
+							<input type="checkbox" id="sports1" name="sports" value="baseball">
+							<label for="sports2">Basketball</label>
+							<input type="checkbox" id="sports2" name="sports" value="basketball">
+							<label for="sports3">Soccer</label>
+							<input type="checkbox" id="sports3" name="sports" value="soccer">
+            <div class="form-field">
+                <input id="submit" type="submit" name="submit" value="Send Form">
+            </div>
+        </fieldset>
+        </form>
+
+        <script type="text/javascript">
+
+        $(document).ready(
+            function()
+            {
+                $("form").submit(
+                    function(event)
+                    {
+											//	console.log($("#sports1").prop("checked"));
+												alert(" Baseball:" + $("#sports1").prop("checked") +
+															" Basketball:" + $("#sports2").prop("checked") +
+															" Soccer:" + $("#sports3").prop("checked")
+															);
+
+												$("#sports1").prop("checked",false);
+												$("#sports2").prop("checked",false);
+												$("#sports3").prop("checked",false);
+
+                        return false;
+                    }
+                );
+            }
+        );
+        </script>
+    </body>
+</html>

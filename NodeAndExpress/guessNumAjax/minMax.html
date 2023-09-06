@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--   -->
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+
+  <body>
+    <div id="request">
+      <label for="minVal">MinVal:</label>
+      <input id="minVal" type="number" name="minVal" value="0" />
+      <label for="maxVal">MaxVal:</label>
+      <input id="maxVal" type="number" name="maxVal" value="10" />
+
+      <input id="select" type="button" value="Select" />
+    </div>
+    <script>
+
+
+      function getminmax(data) {
+        $('#minVal').val(data.minV);
+        $('#maxVal').val(data.maxV);
+      }
+//      function success(data) {
+//
+//          }
+
+      function MinMax(){
+        //$.get("/changeminmax", {minV:$("#minVal").val(),maxV:$("#maxVal").val()},null);
+        $.post("/changeminmax", {minV:$("#minVal").val(),maxV:$("#maxVal").val()},null);
+
+        return false;
+      }
+
+      $(document).ready(function(){
+        $.get("/checkminmax",getminmax);
+        $("#select").click(MinMax);
+      });
+    </script>
+  </body>
+</html>

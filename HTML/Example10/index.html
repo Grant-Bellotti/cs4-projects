@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of forms.
+     The action attribute points to the server program.
+     action="#" goes nowhere, since no server program yet.
+
+
+
+		LARGEST GRADE IS 9-12!!!! 10 default
+		DEFAUlT DATE IS 01/01/2000
+		EMAIL MUST HAVE AN @
+
+		Residence:
+		House
+		Apartment
+		Cabin
+		Castle
+-->
+	<head>
+		<title>Second Forms Ex</title>
+	</head>
+	<body>
+		<h1>A Basic Form</h1>
+		<hr>
+			<form action="#">
+				<fieldset>
+					<legend>Student Information</legend>
+					<div>
+						<fieldset>
+							<legend>General</legend>
+								<label for="username">Name:</label>
+								<input id="username" type="text" name="username" value="name">
+								<label for="birth">Birthdate:</label>
+								<input type="date" id="birth" name="birth" value="2000-01-01">
+								<label for="grade">Grade:</label>
+								<input type="number" id="grade" name="grade" min="9" max="12" value="10">
+						</fieldset>
+
+						<fieldset>
+							<legend>Contact</legend>
+								<label for="phone">Phone</label>
+								<input id="phone" type="text" name="phone" value="800-123-4567">
+								<br>
+								<br>
+								<label for="email">E-mail</label>
+								<input id="email" type="email" name="email">
+						</fieldset>
+
+						<fieldset>
+							<legend>Personal</legend>
+							<label for="res">Residence</label>
+							<select id="res" name="res">
+								<option value="House" selected="selected">House</option>
+								<option value="Apartment">Apartment</option>
+								<option value="Cabin">Cabin</option>
+								<option value="Castle">Castle</option>
+							</select>
+								<br>
+							<label for="lisc">Driver Liscense</label>
+							<input type="checkbox" id="lisc" name="dl" value="lisc">
+								<br>
+							<label>Eating: </label>
+							<input type="radio" id="vegan" name="type" value="vegan">
+							<label for="vegan">Vegan</label>
+							<input type="radio" id="vegetarian" name="type" value="vegetarian">
+							<label for="vegan">Vegetarian</label>
+							<input type="radio" id="omni" name="type" value="omni" checked>
+							<label for="vegan">Omnivore</label>
+							<input type="radio" id="carni" name="type" value="carni">
+							<label for="vegan">Carnivore</label>
+						</fieldset>
+						<label>Comments </label>
+						<br>
+						<textarea id="comment" name="comments" rows="5" cols="20"></textarea>
+						<br>
+						<input type="reset" name="reset" value="Clear Form">
+						<input type="submit" name="send" value="Send Form">
+					</div>
+				</fieldset>
+			</form>
+	</body>
+</html>

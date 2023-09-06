@@ -1,0 +1,26 @@
+
+Understand
+express.static(root, [options])
+root - specifies the root directory from which to serve static assets.
+
+It is an express built in middleware function.
+
+Example might be
+
+app.use(express.static('public'));
+app.use(express.static('files'));
+
+The above will first look in dir 'public' then 'files'.
+=======================
+To create a virtual path prefix (where the path does not actually exist in the file system) 
+for files that are served by the express.static function, specify a mount path for the 
+static directory as shown below.
+
+app.use('/static',express.static('images'));
+
+Now you can load the files that are in the public directory from the /static path prefix.
+
+http://localhost:3000/static/bison.jpg
+
+
+

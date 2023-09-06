@@ -1,0 +1,28 @@
+<hr>   - horizontal rule tag.  Has not closing tag.
+<form> -form element is used to hold user input controls to submit to the web server.
+      can contain as shown <fieldset> <label> <input> <select> <option>
+      and also <textarea> <button> <optgroup>
+    action="#"   is an attribute of the form tag that tells the browser 
+                                           what to do when the submit button is pressed.
+                                           Using "#" is for now just a place holder for a real location.
+<fieldset>  - fieldset element is used to group related elements in a form in a frame.
+<legend> - legend tag will allow a caption for the <fieldset> frame.
+	<label> - label tag   defines a label for an <input> element.
+    for attribute specifies which form element the label is bound to.
+<input> -input tag specifies an input field where the user can input information.
+    type attribute   will define the input type such as   text, checkbox, radio, reset, submit
+    id attribute  id of the input element
+    name attribute   name of the input element
+    value attribute    specifies the value of the input element
+<select> -select tag   specifies a drop down list to choose from.
+    <option> tags inside the <select> element define the available options of the list.
+        value attribute specifies the value sent when submitted
+        selected attribute specifies the default selected option.
+				<input> with type checkbox attribute 2nd one has label done after that is why it is after.
+<input> with type radio attribute 2nd one has label done after that is why it is after.
+    checked attribute will mark that a checkbox or radio will be selected by default.
+    Only 1 radio choice can be selected at a time.
+    The name attribute distinguishes 1 radio group from another.
+<input> with type reset     resets all form values to default values.
+<input> with type submit       will send  a query string in the url which is a name value pair
+                 will make more sense when we actually send to a web server.

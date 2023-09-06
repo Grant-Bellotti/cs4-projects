@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of window.onload
+-->
+	<head>
+		<meta charset="utf-8">
+		<title>Fourth JavaScript and Html Ex</title>
+	</head>
+	<body>
+		<h1>Header</h1>
+		<p id="first">paragraph1</p>
+		<p id="second">paragraph2</p>
+		<p id="third">paragraph3</p>
+		<p id="fourth">paragraph4</p>
+		<script>
+		function initIt()
+		{
+		  var parId = ["first","second","third"];
+		  var things = ["hello","you","school"];
+		  for (var i=0;i < things.length;i++)
+		  {
+		    var handle = document.getElementById(parId[i]);
+		    handle.innerHTML = things[i] + "<br>";
+		  }
+		}
+		window.onload = initIt;
+		</script>
+	</body>
+</html>

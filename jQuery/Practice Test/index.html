@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Shows use of table.
+-->
+    <head>
+        <title>Objects</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Objects</h1>
+        <hr>
+        <form action="#">
+          <div>
+            <fieldset>
+            <legend>Object Information</legend>
+            <label for="object">Object:</label>
+            <input id="object" type="text" name="object" value="">
+            <label for="color">Color:</label>
+            <input id="color" type="color" name="color">
+            <label for="type">Type</label>
+            <select id="type" name="type">
+              <option value="Animal">Animal</option>
+              <option value="Plant">Plant</option>
+              <option value="Mineral">Mineral</option>
+              <option value="ManMade" selected="selected">Man Made</option>
+            </select>
+            <label for="rating">Rating</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" value="5">
+          	<input type="image" src="cat.jpg" alt="submit" width="50" height="50" border="2">
+            </fieldset>
+          </div>
+        </form>
+
+        <table id="theTable" border="1">
+            <tr>
+                <th>Object</th>
+                <th>Red</th>
+                <th>Green</th>
+                <th>Blue</th>
+                <th>Type</th>
+                <th>Rating</th>
+            </tr>
+        </table>
+        <br>
+        <p>After you complete the above, add the below inputs to fill the form.<p>
+        <input type="button" value="Fill Form" onclick="handleButtonClick()">
+        <input id="indexNum" type="number" name="indexNum" value="1" min="1">
+
+        <script type="text/javascript" src="index.js"></script>
+
+    </body>
+</html>

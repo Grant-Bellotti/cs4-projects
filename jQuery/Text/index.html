@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Shows use of form events
+-->
+    <head>
+        <title>Checkbox Ex</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <h1>Checkbox Form</h1>
+        <hr>
+        <form action="#">
+        <fieldset>
+            <legend>Form Information</legend>
+            <input id="name" type="text" value="fred">
+
+            <div class="form-field">
+                <input id="submit" type="submit" name="submit" value="Send Form">
+            </div>
+        </fieldset>
+        </form>
+
+        <script type="text/javascript">
+
+        $(document).ready(
+            function()
+            {
+                $("form").submit(
+                    function(event)
+                    {
+                      alert($("#name").val());
+	                    $("#name").val("jojo");
+
+                        return false;
+                    }
+                );
+            }
+        );
+        </script>
+    </body>
+</html>
